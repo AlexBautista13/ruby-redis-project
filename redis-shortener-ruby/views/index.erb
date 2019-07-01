@@ -1,0 +1,17 @@
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <form method="post">
+      <input type="text" value="<%= escape_html(params[:url]) %>" name="url" id="url" />
+      <input type="submit" value="shorten url" id="submit" class="btn-large waves-effect waves-light orange" />
+    </form>
+
+    <div class="clear"></div>
+
+    <% if @shortcode %>
+      <h5 class="header col s12 light">
+        Your shortened URL is:
+        <a href="http://localhost:4567/<%= @shortcode %>">http://localhost:4567/<%= @shortcode %></a>
+      </h5>
+    <% end %>
+  </div>
+</div>
